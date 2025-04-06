@@ -1,6 +1,7 @@
 ## A Customized Multiplier-less Spiking Neural Network Accelerator for Real-time Neural Signal Decoding
 
 # Hierarchy
+```
 Fpga top
 ├── Customed design controller
 │   ├── data access
@@ -20,3 +21,4 @@ Fpga top
 └── Display interface
     ├── VGA display interface
     └── 7-segment display interface
+```
