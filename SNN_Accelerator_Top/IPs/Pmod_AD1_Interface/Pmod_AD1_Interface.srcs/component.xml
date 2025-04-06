@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>PMOD_AD1_Wrapper</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>resetn</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>resetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RESETN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>aresetn</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.ARESETN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>aclk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.ACLK.ASSOCIATED_BUSIF">M_AXI</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.ACLK.ASSOCIATED_RESET">resetn</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>PMOD_AD1_Wrapper</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>0f8154de</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>PMOD_AD1_Wrapper</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>0f8154de</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_testbench</spirit:name>
+        <spirit:displayName>Test Bench</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation.testbench</spirit:envIdentifier>
+        <spirit:modelName>tb_PMOD_AD1_wrapper</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_testbench_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>72d199f8</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>3b8f8bdd</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>clk_100MH</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>resetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ADC_input_A</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ADC_input_B</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>CS</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>SCLK</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>dataA</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>dataB</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>Output_Addr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sd_valid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sd_data</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">7</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>muxsel</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>data_mux</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>data_valid_mux</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>rd_en</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>dout</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>bramen</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>addr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">15</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>clkb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>BRAM_MAX_ADDR</spirit:name>
+        <spirit:displayName>Bram Max Addr</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.BRAM_MAX_ADDR" spirit:bitStringLength="32">0x00002000</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+        <spirit:displayName>C S00 Axi Data Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>C S00 Axi Addr Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH">4</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_M00_AXI_START_DATA_VALUE</spirit:name>
+        <spirit:displayName>C M00 Axi Start Data Value</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M00_AXI_START_DATA_VALUE" spirit:bitStringLength="32">0x00000000</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_M00_AXI_TARGET_SLAVE_BASE_ADDR</spirit:name>
+        <spirit:displayName>C M00 Axi Target Slave Base Addr</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M00_AXI_TARGET_SLAVE_BASE_ADDR" spirit:bitStringLength="32">0x00000000</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_M00_AXI_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>C M00 Axi Addr Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M00_AXI_ADDR_WIDTH">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_M00_AXI_DATA_WIDTH</spirit:name>
+        <spirit:displayName>C M00 Axi Data Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M00_AXI_DATA_WIDTH">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_M00_AXI_TRANSACTIONS_NUM</spirit:name>
+        <spirit:displayName>C M00 Axi Transactions Num</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M00_AXI_TRANSACTIONS_NUM">1</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/blk_mem_gen_0/blk_mem_gen_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sources_1/new/PMOD_AD1_Interface.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sources_1/new/clock_divider_20MHz.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sources_1/new/data_input_mux.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sources_1/new/PMOD_AD1_Wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_9bf12ff7</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="blk_mem_gen" xilinx:version="8.4">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/blk_mem_gen_0/blk_mem_gen_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sources_1/new/PMOD_AD1_Interface.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sources_1/new/clock_divider_20MHz.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sources_1/new/data_input_mux.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>sources_1/new/PMOD_AD1_Wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="blk_mem_gen" xilinx:version="8.4">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_testbench_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>sim_1/new/tb_PMOD_AD1_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_testbench</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/PMOD_AD1_Wrapper_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_3b8f8bdd</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>PMOD_AD1_Wrapper_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">PMOD_AD1_Wrapper_v1_0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>BRAM_MAX_ADDR</spirit:name>
+      <spirit:displayName>Bram Max Addr</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.BRAM_MAX_ADDR" spirit:bitStringLength="32">0x00002000</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+      <spirit:displayName>C S00 Axi Data Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_DATA_WIDTH">32</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>C S00 Axi Addr Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_ADDR_WIDTH">4</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_M00_AXI_START_DATA_VALUE</spirit:name>
+      <spirit:displayName>C M00 Axi Start Data Value</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M00_AXI_START_DATA_VALUE" spirit:bitStringLength="32">0x00000000</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_M00_AXI_TARGET_SLAVE_BASE_ADDR</spirit:name>
+      <spirit:displayName>C M00 Axi Target Slave Base Addr</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M00_AXI_TARGET_SLAVE_BASE_ADDR" spirit:bitStringLength="32">0x00000000</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_M00_AXI_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>C M00 Axi Addr Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M00_AXI_ADDR_WIDTH">32</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_M00_AXI_DATA_WIDTH</spirit:name>
+      <spirit:displayName>C M00 Axi Data Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M00_AXI_DATA_WIDTH">32</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_M00_AXI_TRANSACTIONS_NUM</spirit:name>
+      <spirit:displayName>C M00 Axi Transactions Num</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M00_AXI_TRANSACTIONS_NUM">1</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">virtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qvirtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">spartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aspartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexu</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplusHBM</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexu</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>PMOD_AD1_Wrapper_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>26</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-03-31T03:51:36Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79cc4dcd_ARCHIVE_LOCATION">d:/dropbox/a_phd1styear/ece532/project_folder/adc_interface/pmod_ad1_interface/pmod_ad1_interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1329f025_ARCHIVE_LOCATION">d:/dropbox/a_phd1styear/ece532/project_folder/adc_interface/pmod_ad1_interface/pmod_ad1_interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79db7484_ARCHIVE_LOCATION">d:/dropbox/a_phd1styear/ece532/project_folder/adc_interface/pmod_ad1_interface/pmod_ad1_interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a785386_ARCHIVE_LOCATION">d:/dropbox/a_phd1styear/ece532/project_folder/adc_interface/pmod_ad1_interface/pmod_ad1_interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@555023f4_ARCHIVE_LOCATION">d:/dropbox/a_phd1styear/ece532/project_folder/adc_interface/pmod_ad1_interface/pmod_ad1_interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a5338de_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@209aaff6_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fa784f5_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49617fe6_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7db78fc0_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44d9bbc_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@779f324c_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@320f7aa6_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30dfc4f2_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4df7d52e_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7351ee92_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@df1c8a8_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31381c3c_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1840e7aa_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5aef75ae_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a190c1c_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50d02d99_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b9e6959_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51d6290_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6638ee97_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@259d3ddf_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43232f0a_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13a6be06_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c914cc4_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15d2f499_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62c3cc84_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1767f6a9_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f94639d_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69f53598_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71453b2_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27308e1f_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6643a2cf_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b1134b4_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7480d1c6_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16bf4d78_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c6cd30d_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56b90d39_ARCHIVE_LOCATION">d:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46b6d37d_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fa23ab_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d5ff7dc_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ab97f71_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@305eb62_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20e158a0_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b8c41ba_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fd6ae4_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2664d02_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a783bb7_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bc852_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@86eb5eb_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@767e2132_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e9fa7af_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66ec0a7f_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d65699_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c20b267_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7eb73244_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c4de17f_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c4121d7_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30cd9512_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e85cf25_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54e20b27_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56ad252f_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@486cb1bd_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38da4fa8_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b192cb2_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12500155_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58e04fb5_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b00760_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dcbdb61_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ba470a0_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@700f673_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73a768be_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61feef13_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65ef277d_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9fc1872_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22e50c18_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33d2ec58_ARCHIVE_LOCATION">e:/Dropbox/a_PhD1stYear/ECE532/Project_folder/ADC_Interface/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7da4c651_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47968e32_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69cf9516_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5259f68a_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b17fbf4_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c6000b_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53062a3c_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e4d5e4_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b1fc8ea_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a2c4ef8_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67519938_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a0d1816_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79c8a7d8_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15baf86f_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@240ae56a_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@585d89a6_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30170d75_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@334fd7e1_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f25fc7c_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42364c3_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2424bd7_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c98d87f_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47a07032_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70cfd14a_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a09d649_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a2b9d03_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d34678e_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26dcb770_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20b1651_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ef63ff9_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48976691_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52a0267a_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6261014d_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9b8f53a_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@81d6e8f_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42b1aa92_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b7195e9_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@da91da_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d844ea9_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f1dcd41_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b84ed3_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ecb6ee3_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@316050bc_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b7bc1e0_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f3116f5_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58182c5c_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c31e30d_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78143bfa_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fba3cad_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d0e48c4_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@592e4149_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6302095c_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72befc58_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@340f7806_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@84254fd_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3009f381_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63d872f8_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b7fda8b_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@448b5adb_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dd11e7f_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bfc4618_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7399e28e_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67676473_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e3691b4_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67622cb4_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28b29167_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bf88076_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c7e284c_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ff6c317_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@304717ae_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e4bec0c_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f9d7a7_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50e5385f_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7eac9de7_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24cf4e9e_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a1a9850_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e528181_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ed47905_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57207771_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a6d2cc6_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36a52a05_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7deebce4_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12126660_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a5ad696_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21abc6c3_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b7dd035_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fa7c7ca_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f66fcd1_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31e878ba_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74167bce_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@488d7f29_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3662b8d_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77cca298_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b0559b0_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@209eb455_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@579883a8_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16029e30_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24138e45_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41c538ba_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48f0fe5c_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c96223d_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35bf243_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16da5341_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@407ebee6_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ac16ceb_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bca085a_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11958f36_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65f72371_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f839e_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32054af0_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d7a2461_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19d7af50_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39b86aa4_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@469a7623_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15e9ba72_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ca38015_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78d7ce6b_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5428991b_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10eca098_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4faf434f_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@537c20aa_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45f7b1ef_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b2e7a2b_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@384892a8_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@555c3564_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f7bcb8f_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c761a92_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@837c0e9_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b023fbc_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f454396_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d1ce16_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71c16fa4_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fa87293_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29fddc79_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73e461d5_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33f9ec49_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cf60f93_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5777b51f_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76147b4a_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20bde1fa_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11c60ae_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dd2153b_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@565afa88_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b3024e7_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52871d31_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3be2aa66_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b1eeac5_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@140d638_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@270e93e3_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d03c8c1_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bb8d482_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@139f37d6_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7810af81_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@150d55d0_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9f94e37_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68eca759_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65bd1879_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1192d427_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c2c2512_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d407136_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27a8ebdb_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c9b3ac3_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c1a783c_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25b97488_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c6246b0_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50125f95_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f9e080f_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58e65cbc_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16c5dfbb_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43abe01d_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58e8a359_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6934d9cb_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dfe053f_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63e240ea_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@482175ec_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e1773f_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@706d91c4_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ef75eb4_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fc61597_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77d0a2b5_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4eeb59c2_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39b7a9b1_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b65bce2_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@335f574b_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@118060a5_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bd5901d_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@613584d8_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e35c891_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d7a4209_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33f80f3b_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55497090_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67997552_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f6c1fdd_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e691196_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ec61add_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6be6c69d_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11d75f66_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e4a9a9b_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11c95078_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@227991d4_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@435e3068_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18bc6441_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6def09bb_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60b40c83_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44f702da_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@189c24be_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e0372d4_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12aabe6d_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f03daf_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10740176_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@499e2283_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bd5932d_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_on_Board/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55720614_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3326618c_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a5fd49e_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@262536a9_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2983fba2_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@664fb87a_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@341ba430_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1957e305_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d6a9c1_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77d1eec8_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e31e411_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f6d09d9_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f41c416_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11f4c63d_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@eee9e49_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ac74850_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@522b26fe_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66eaa949_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64e93d59_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@224e290_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5874060_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bbf37e5_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@330bfa80_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31acf6b0_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@585c9fdb_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4026dd3c_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52adffd1_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@289d6989_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40924418_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d1a1531_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57a4e939_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7eab42d7_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1647b676_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78084c32_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20595cee_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5750d0e6_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22b655ee_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ff6fb9a_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@362df31a_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@463ec9e9_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42c479a3_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17256763_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64db9b62_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36f76bc0_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63f4e41a_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58699bcc_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19e2d9ec_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4247242b_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@eac0b11_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71ebf573_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e712aaa_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10b7265f_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@612e30f9_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a11d4df_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@475739eb_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5843a33b_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ad23374_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55881750_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bada180_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71655553_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66be4656_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@246996f1_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50feaa26_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@780429cc_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@101bf545_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33aeb550_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@153df2e7_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@694f8f02_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fa383b3_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4880ecb0_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a7d4f4e_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18897f8d_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4562b05c_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e6487c1_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54748f56_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4df65e40_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3258e7c3_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c6eaedf_ARCHIVE_LOCATION">c:/Users/bruce/Documents/Projects/ece532/Project/SNN_Accelerator_Top/IPs/Pmod_AD1_Interface/Pmod_AD1_Interface.srcs</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="029ec2c8"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c614659c"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="18949742"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="cb23e84c"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="60089eb2"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>
